@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root{
+    --font: "Poppins", sans-serif;
+
+    /* ### Primary */
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --GreenHover: hsl(154, 64%, 63%);
+    --GreenShadow: hsl(154, 51%, 51%);
+
+    /* ### Accent */
+
+    --Blue: hsl(248, 32%, 49%);
+    --white: white;
+
+    /* ### Neutral */
+
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --rayish-Blue: hsl(246, 25%, 77%);
+}
+
+body{
+    background-image: url(images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerGeneral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white)
+}
+
+.parrafo1{
+    padding: 30px 30px 50px;
+    font-weight: 500;
+}
+
+.container3{
+    width: 90%;
+}
+
+.tryFree{
+    text-align: center;
+    padding: 25px 70px;
+    background-color: var(--Blue);
+    border-radius: 15px;
+    color: var(--white);
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.container2{
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.inputContainer{
+    position: relative;
+}
+
+.error-icon{
+    position: absolute;
+    background-image: url(images/icon-error.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 15px;
+    display: none;
+}
+
+.error-message{
+    color: var(--Red);
+    font-size: 10px;
+    font-style: italic;
+    position: relative;
+    bottom: 10px;
+    text-align: right;
+    display: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 0.1px solid var(--Dark-Blue);
+    font-weight: 600;
+}
+
+input{
+    color: var(--Dark-Blue);
+}
+
+input:focus{
+    border-color: var(--Dark-Blue);
+    outline: none;
+    box-shadow: 0 0 2px var(--Dark-Blue);
+}
+
+input::placeholder{
+    color: gray;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Green);
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 3px var(--GreenShadow);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--GreenHover);
+    cursor: pointer;
+}
+
+.textoExtra{
+    text-align: center;
+    font-size: 10px;
+    margin-top: 15px;
+    color: var(--rayish-Blue);
+}
+
+.textoExtra span{
+    color: var(--Green);
+}
+
+.attribution {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 11px;
+    text-align: center;
+    }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+    .containerGeneral{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .container1{
+        width: 900px;
+        text-align: left;
+        margin-right: 70px;
+    }
+    .Titulo1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .parrafo1{
+        padding: 0;
+        margin-top: 20px;
+    }
+
+} 
